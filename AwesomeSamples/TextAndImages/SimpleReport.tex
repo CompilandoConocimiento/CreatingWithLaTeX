@@ -1,0 +1,148 @@
+% ****************************************************************************************
+% ************************      NAME OF DOCUMENT      ************************************
+% ****************************************************************************************
+
+
+% =======================================================
+% =======   ALL COMMANDS AND RULES FOR DOC   ============
+% =======================================================
+\documentclass[12pt]{article}                               %Type of docuemtn and size of font
+\usepackage[margin=0.8in]{geometry}                         %Margins
+
+\usepackage[spanish]{babel}                                 %Please use spanish
+\usepackage[utf8]{inputenc}                                 %Please use spanish 
+\usepackage[T1]{fontenc}                                    %Please use spanish
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}             %Make math beautiful
+\decimalpoint                                               %Make math beautiful
+\setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
+
+\usepackage{graphicx}                                       %Allow to create graphics
+\usepackage{wrapfig}                                        %Allow to create images
+\graphicspath{ {Graphics/} }                                %Where are the images :D
+\usepackage{listings}                                       %We will be using code here
+\usepackage[inline]{enumitem}                               %We will need to enumarate
+
+\usepackage{fancyhdr}                                       %Lets make awesome headers/footers
+\renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
+\setlength{\headheight}{16pt}                               %We will need this!
+\setlength{\parskip}{0.5em}                                 %We will need this!
+\pagestyle{fancy}                                           %Lets make awesome headers/footers
+\lhead{\footnotesize{\leftmark}}                            %Headers!
+\rhead{\footnotesize{\rightmark}}                           %Headers!
+\lfoot{University}                                          %Footers!
+\rfoot{Rosas Hernandez Oscar Andres}                        %Footers!
+
+\author{Rosas Hernandez Oscar Andrés}                       %Who I am
+
+
+
+
+% =====================================================
+% ============        COVER PAGE       ================
+% =====================================================
+\begin{document}
+\begin{titlepage}
+
+    \center
+    % ============ UNIVERSITY NAME AND DATA =========
+    \textsc{\Large Super Materia}\\[0.5cm] 
+    \textsc{\large Grupo}\\[1.5cm]
+
+    % ============ NAME OF THE DOCUMENT  ============
+    \rule{\linewidth}{0.5mm} \\[1.0cm]
+        { \huge \bfseries El Mejor Reporte que has visto en tu Vida}\\[1.0cm] 
+    \rule{\linewidth}{0.5mm} \\[2.0cm]
+     
+    % ============  MY INFORMATION  =================
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+            \textbf{\textsc{Alumno:}}\\
+            Rosas Hernandez Oscar Andres
+        \end{flushleft}
+    \end{minipage}
+    ~
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushright} \large
+            \textbf{\textsc{Profesor: }}\\
+            Richard Stallman
+        \end{flushright}
+    \end{minipage}\\[3,5cm]
+
+    % ====== SEMI TITLE ==========
+    {\LARGE El mismo título pero mas aburrido}\\[7cm] 
+    
+    
+    % ====== DATE ================
+    {\large 1 de Enero de 1970}\\[2cm] 
+
+    \vfill
+
+\end{titlepage}
+
+
+
+
+% ======================================================================================
+% ==================================     DOCUMENT  =====================================
+% ======================================================================================
+
+
+% =====================================================
+% ============    SECCION 1          ==================
+% =====================================================
+\section{Sección General del Reporte}
+
+
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \centering
+    \includegraphics[width=0.30\textwidth]{PilaresCreacion.jpg}
+    \caption{Figura 1}
+\end{wrapfigure}
+ 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere lorem urna, vitae fringilla tellus bibendum a. Vestibulum id augue quis ipsum mollis sagittis. Vivamus sagittis sed eros in condimentum. Nam vitae interdum eros. Nunc ullamcorper pellentesque nisl, a volutpat odio dapibus sit amet. Mauris auctor, sapien et viverra rutrum, massa sapien maximus dui, eu sodales nunc est tincidunt metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper porttitor urna non sagittis. Phasellus consectetur ante ut dui pulvinar, sed eleifend arcu tempor. In sed elementum turpis. Donec blandit enim at interdum dictum. Praesent convallis, massa vel elementum iaculis, quam dui tincidunt quam, at posuere neque ligula eget justo. Maecenas facilisis volutpat dolor. Mauris molestie a magna et mattis. Nam at tortor sed justo consequat pellentesque.
+
+Integer ligula libero, condimentum in vehicula vel, placerat vel erat. Pellentesque ac iaculis tellus. Donec viverra nulla eu justo ornare facilisis. Quisque vitae iaculis turpis. Sed scelerisque, risus sit amet suscipit vestibulum, turpis quam commodo nulla, vitae maximus neque leo sed ex. Vestibulum ullamcorper massa quis nisi rutrum auctor. Vestibulum nunc arcu, dapibus vitae sodales non, scelerisque id dui. Etiam id condimentum orci. Praesent porttitor quam ut nisl congue fringilla. Ut posuere nisl in justo aliquet, ac aliquam diam vulputate. Sed laoreet mi mauris, in consectetur massa fringilla ac. Suspendisse vehicula tristique quam eu imperdiet. In egestas eros at mauris pellentesque, eu porttitor libero tempus.
+
+Pellentesque vestibulum ut diam nec pellentesque. Donec sapien ex, mollis non dictum eget, vehicula sed mauris. Nulla tempor, augue tincidunt tincidunt suscipit, felis nunc rutrum eros, at convallis augue nunc non lacus. Aliquam at malesuada urna, at luctus ipsum. Vivamus euismod, tortor sed imperdiet imperdiet, sem sem eleifend quam, vel fringilla nunc nisi in erat. Aenean consectetur malesuada risus, ut vehicula elit. Nunc aliquam tempus justo ut venenatis. Ut tristique quam ac risus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse efficitur mauris lacus, non convallis elit congue nec. Curabitur ut tortor vel tellus tincidunt hendrerit. Fusce egestas enim luctus lorem posuere, tincidunt ultrices nisl auctor.
+
+
+
+% =====================================================
+% ============        SECTION 2      ==================
+% =====================================================
+\clearpage
+\section{Seccion General 2}
+
+Pellentesque vestibulum ut diam nec pellentesque. Donec sapien ex, mollis non dictum eget, vehicula sed mauris. Nulla tempor, augue tincidunt tincidunt suscipit, felis nunc rutrum eros, at convallis augue nunc non lacus. Aliquam at malesuada urna, at luctus ipsum. Vivamus euismod, tortor sed imperdiet imperdiet, sem sem eleifend quam, vel fringilla nunc nisi in erat. Aenean consectetur malesuada risus, ut vehicula elit. Nunc aliquam tempus justo ut venenatis. Ut tristique quam ac risus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse efficitur mauris lacus, non convallis elit congue nec. Curabitur ut tortor vel tellus tincidunt hendrerit. Fusce egestas enim luctus lorem posuere, tincidunt ultrices nisl auctor.
+
+
+\subsection{Podemos tener Subsecciones}
+Pellentesque vestibulum ut diam nec pellentesque. Donec sapien ex, mollis non dictum eget, vehicula sed mauris. Nulla tempor, augue tincidunt tincidunt suscipit, felis nunc rutrum eros, at convallis augue nunc non lacus. Aliquam at malesuada urna, at luctus ipsum. Vivamus euismod, tortor sed imperdiet imperdiet, sem sem eleifend quam, vel fringilla nunc nisi in erat. Aenean consectetur malesuada risus, ut vehicula elit. Nunc aliquam tempus justo ut venenatis. Ut tristique quam ac risus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse efficitur mauris lacus, non convallis elit congue nec. Curabitur ut tortor vel tellus tincidunt hendrerit. Fusce egestas enim luctus lorem posuere, tincidunt ultrices nisl auctor.
+\cite{Sitio1}
+
+
+
+
+% =====================================================
+% ============        BIBLIOGRAPHY   ==================
+% =====================================================
+\clearpage
+\bibliographystyle{plain}
+    \begin{thebibliography}{9}
+
+    % ============ REFERENCE #1 ========
+    \bibitem{Sitio1} 
+        PreguntasMathStack
+        \\\texttt{Referencia.com/Sectio}
+
+
+     
+
+\end{thebibliography}
+
+
+
+\end{document}

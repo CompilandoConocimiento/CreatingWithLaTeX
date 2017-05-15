@@ -1,0 +1,55 @@
+
+% ****************************************************************************************
+% **************      COMPILATION OF ALL MATH FORMULAS THAT I KNOW     *******************
+% ****************************************************************************************
+\documentclass{article}
+
+\usepackage{amsthm, amssymb, amsfonts}                      %Make math beautiful
+\usepackage[fleqn]{amsmath}                                 %Please make equations left
+ 
+\begin{document}
+
+   
+% ======================================================
+% ==================    MATRIX  ========================
+% ======================================================
+% You can change the style:
+%  bmatrix - Use brackets
+%  pmatrix - Use parentesis
+%  matrix - Use nothing xD
+
+% And "%" is a new cell
+% And "\\" is used to enter a new line
+\begin{equation*}
+   \begin{bmatrix} 1 &4&3 \\ 0&1&7 \\ 0&0&8 \end{bmatrix}
+\end{equation*}
+
+
+
+% ======================================================
+% ==================    TABLES  ========================
+% ======================================================
+
+% Style of a Table
+% Remember that "|" means make a vertical line
+%  - "c" Center things of this column
+%  - "r" Rigth align things of this column
+
+\begin{tabular}{r ||c |c | c |c }
+   % And this is the name of all the headers
+   &  +,- & . & 0,1..9 & \\ [0.5ex] 
+   \hline\hline
+  
+   %Body
+   $ \{ q_0\}$  &  $\{ q_1 \}$  &  $\{ q_2 \}$  & $\{ q_1, q_4\}$ &     \\
+   $ \{ q_1 \}$ &  $\emptyset$  &  $\{ q_2 \}$  & $\{ q_1, q_4\}$ &     \\
+   $ \{ q_2 \}$ &  $\emptyset$  &  $\emptyset$  & $\{ q_3, q_5\}$ &     \\
+   $ \{ q_1 \}$ &  $\emptyset$  &  $\{ q_ 2\}$  & $\{ q_1, q_4\}$ &     \\
+   $ \{ q_3 \}$ &  $\emptyset$  &  $\emptyset$  & $\{ q_3, q_5\}$ &     \\
+   $ \{ q_2 \}$ &  $\emptyset$  &  $\emptyset$  & $\{ q_3, q_5\}$ &     \\
+ 
+\end{tabular}
+
+
+
+\end{document}
