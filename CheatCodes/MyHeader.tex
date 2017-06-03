@@ -1,40 +1,43 @@
-
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
-  \documentclass[12pt]{report}                                %Type of docuemtn and size of font
-  \usepackage[margin=1.2in]{geometry}                         %Margins
+    \documentclass[12pt]{report}                                %Type of docuemtn and size of font
+    \usepackage[margin=1.2in]{geometry}                         %Margins
+    \usepackage{hyperref}                                       %Create MetaData for a PDF
 
-  \usepackage[spanish]{babel}                                 %Please use spanish
-  \usepackage[utf8]{inputenc}                                 %Please use spanish 
-  \usepackage[T1]{fontenc}                                    %Please use spanish
+    \usepackage[spanish]{babel}                                 %Please use spanish
+    \usepackage[utf8]{inputenc}                                 %Please use spanish 
+    \usepackage[T1]{fontenc}                                    %Please use spanish
 
-  \usepackage{amsthm, amssymb, amsfonts, mathrsfs}            %Make math beautiful
-  \usepackage[fleqn]{amsmath}                                 %Please make equations left
-  \decimalpoint                                               %Make math beautiful
-  \setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
+    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}            %Make math beautiful
+    \usepackage[fleqn]{amsmath}                                 %Please make equations left
+    \decimalpoint                                               %Make math beautiful
+    \setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
 
-  \usepackage{graphicx}                                       %Allow to create graphics
-  \usepackage{wrapfig}                                        %Allow to create images
-  \graphicspath{ {Graphics/} }                                %Where are the images :D
-  \usepackage{listings}                                       %We will be using code here
-  \usepackage[inline]{enumitem}                               %We will need to enumarate
+    \usepackage{graphicx}                                       %Allow to create graphics
+    \usepackage{wrapfig}                                        %Allow to create images
+    \graphicspath{ {Graphics/} }                                %Where are the images :D
+    \usepackage{listings}                                       %We will be using code here
+    \usepackage[inline]{enumitem}                               %We will need to enumarate
 
-  \usepackage{fancyhdr}                                       %Lets make awesome headers/footers
-  \usepackage{tasks}                                          %Horizontal lists
-  \renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
-  \setlength{\headheight}{16pt}                               %We will need this!
-  \setlength{\parskip}{0.5em}                                 %We will need this!
-  \pagestyle{fancy}                                           %Lets make awesome headers/footers
-  \lhead{\footnotesize{\leftmark}}                            %Headers!
-  \rhead{\footnotesize{\rightmark}}                           %Headers!
-  \lfoot{Compilando Conocimiento}                             %Footers!
-  \rfoot{Oscar Rosas}                                         %Footers!
+    \usepackage{fancyhdr}                                       %Lets make awesome headers/footers
+    \usepackage{tasks}                                          %Horizontal lists
+    \usepackage{longtable}                                      %Lets make tables awesome
 
-  \author{Oscar Andrés Rosas}                                 %Who I am
+    \renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
+    \setlength{\headheight}{16pt}                               %We will need this!
+    \setlength{\parskip}{0.5em}                                 %We will need this!
+    \pagestyle{fancy}                                           %Lets make awesome headers/footers
+    \lhead{\footnotesize{\leftmark}}                            %Headers!
+    \rhead{\footnotesize{\rightmark}}                           %Headers!
+    \lfoot{Compilando Conocimiento}                             %Footers!
+    \rfoot{Oscar Rosas}                                         %Footers!
+
+    \author{Oscar Andrés Rosas}                                 %Who I am
 
 % ========================================
 % ===========   COMMANDS    ==============
 % ========================================
-  \DeclareMathOperator \Real {\mathbb{R}}                     %The real numbers
-  \DeclareMathOperator \LinealTransformation {\mathcal{T}}    %A Cool T, that's it!
+    \DeclareMathOperator \Real {\mathbb{R}}                     %The real numbers
+    \DeclareMathOperator \Naturals {\mathbb{N}}                 %The real numbers
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}    %A Cool T, that's it!
