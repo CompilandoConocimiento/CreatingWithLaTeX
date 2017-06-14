@@ -1,43 +1,63 @@
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
-    \documentclass[12pt]{report}                                %Type of docuemtn and size of font
-    \usepackage[margin=1.2in]{geometry}                         %Margins
-    \usepackage{hyperref}                                       %Create MetaData for a PDF
+    % *********   DOCUMENT ITSELF   **************
+    \documentclass[12pt]{report}                                    %Type of docuemtn and size of font
+    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
+    \usepackage{ifthen}                                             %Allow simple programming
+    \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
+    \author{Oscar Andrés Rosas}                                     %Who I am
 
-    \usepackage[spanish]{babel}                                 %Please use spanish
-    \usepackage[utf8]{inputenc}                                 %Please use spanish 
-    \usepackage[T1]{fontenc}                                    %Please use spanish
+    % *********   LANGUAJE AND UFT-8   *********
+    \usepackage[spanish]{babel}                                     %Please use spanish
+    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
+    \usepackage[T1]{fontenc}                                        %Please use spanish
 
-    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}            %Make math beautiful
-    \usepackage[fleqn]{amsmath}                                 %Please make equations left
-    \decimalpoint                                               %Make math beautiful
-    \setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
+    % *********   MATH AND HIS STYLE  *********
+    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
+    \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \decimalpoint                                                   %Use decimal point
 
-    \usepackage{graphicx}                                       %Allow to create graphics
-    \usepackage{wrapfig}                                        %Allow to create images
-    \graphicspath{ {Graphics/} }                                %Where are the images :D
-    \usepackage{listings}                                       %We will be using code here
-    \usepackage[inline]{enumitem}                               %We will need to enumarate
+    % *********   GRAPHICS AND IMAGES *********
+    \usepackage{graphicx}                                           %Allow to create graphics
+    \usepackage{wrapfig}                                            %Allow to create images
+    \graphicspath{ {Graphics/} }                                    %Where are the images :D
 
-    \usepackage{fancyhdr}                                       %Lets make awesome headers/footers
-    \usepackage{tasks}                                          %Horizontal lists
-    \usepackage{longtable}                                      %Lets make tables awesome
+    % *********   LISTS AND TABLES ***********
+    \usepackage{listings}                                           %We will be using code here
+    \usepackage[inline]{enumitem}                                   %We will need to enumarate
+    \usepackage{tasks}                                              %Horizontal lists
+    \usepackage{longtable}                                          %Lets make tables awesome
 
-    \renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
-    \setlength{\headheight}{16pt}                               %We will need this!
-    \setlength{\parskip}{0.5em}                                 %We will need this!
-    \pagestyle{fancy}                                           %Lets make awesome headers/footers
-    \lhead{\footnotesize{\leftmark}}                            %Headers!
-    \rhead{\footnotesize{\rightmark}}                           %Headers!
-    \lfoot{Compilando Conocimiento}                             %Footers!
-    \rfoot{Oscar Rosas}                                         %Footers!
 
-    \author{Oscar Andrés Rosas}                                 %Who I am
+    % *********   HEADERS AND FOOTERS ********
+    \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
+    \pagestyle{fancy}                                               %Lets make awesome headers/footers
+    \setlength{\headheight}{16pt}                                   %Top line
+    \setlength{\parskip}{0.5em}                                     %Top line
+    \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
 
+    \lhead{\normalsize{\textsc{\nouppercase{\leftmark}}}}           %Headers!
+    \rhead{\footnotesize{\textsc{\nouppercase{\rightmark}}}}        %Headers!
+
+    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}     %This will always be a footer  
+
+    \fancyfoot[L]{                                                  %Algoritm for a changing footer
+        \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
+            {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
+                {\footnotesize                                      %Send the page
+                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
+            {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
+                {\footnotesize                                      %Send the author
+                    {\textsc{Compilando Conocimiento}}}}            %Send the author
+    }
+    
 % ========================================
 % ===========   COMMANDS    ==============
 % ========================================
-    \DeclareMathOperator \Real {\mathbb{R}}                     %The real numbers
-    \DeclareMathOperator \Naturals {\mathbb{N}}                 %The real numbers
-    \DeclareMathOperator \LinealTransformation {\mathcal{T}}    %A Cool T, that's it!
+    \DeclareMathOperator \Real {\mathbb{R}}
+    \DeclareMathOperator \Complex {\mathbb{C}}
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}
+
+
