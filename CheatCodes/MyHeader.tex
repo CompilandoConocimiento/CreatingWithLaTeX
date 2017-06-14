@@ -38,10 +38,17 @@
     \setlength{\parskip}{0.5em}                                     %Top line
     \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
 
-    \lhead{\normalsize{\textsc{\nouppercase{\leftmark}}}}           %Headers!
-    \rhead{\footnotesize{\textsc{\nouppercase{\rightmark}}}}        %Headers!
+    \lhead{                                                         %Left Header
+        \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
+        {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
+    }
 
-    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}     %This will always be a footer  
+    \rhead{                                                         %Right Header
+        \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
+            {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
+    }
+
+    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}    %This will always be a footer  
 
     \fancyfoot[L]{                                                  %Algoritm for a changing footer
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
@@ -52,6 +59,8 @@
                 {\footnotesize                                      %Send the author
                     {\textsc{Compilando Conocimiento}}}}            %Send the author
     }
+    
+    
     
 % ========================================
 % ===========   COMMANDS    ==============
