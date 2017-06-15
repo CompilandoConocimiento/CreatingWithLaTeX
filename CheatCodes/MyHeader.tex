@@ -65,8 +65,26 @@
 % ========================================
 % ===========   COMMANDS    ==============
 % ========================================
-    \DeclareMathOperator \Real {\mathbb{R}}
-    \DeclareMathOperator \Complex {\mathbb{C}}
-    \DeclareMathOperator \LinealTransformation {\mathcal{T}}
 
+    % =====  NUMBER THEORY  ==========
+    \DeclareMathOperator \Real {\mathbb{R}}                         %Use: \Real por Notation
+    \DeclareMathOperator \Complex {\mathbb{C}}                      %Use: \Complex por Notation
+    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool space
 
+    % =====  VECTORS  ================
+    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
+        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    }
+    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use parentesis
+        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    }
+    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
+        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+    }
+
+    %==== TEMPORAL COMMANDS ==========
+    \DeclareMathOperator \LT {\mathcal{T}}                          %Use: \LT for a cool T
+    
+ 
