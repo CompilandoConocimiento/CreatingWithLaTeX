@@ -2,14 +2,36 @@
 % ****************************************************************************************
 % **************      COMPILATION OF ALL MATH FORMULAS THAT I KNOW     *******************
 % ****************************************************************************************
-\documentclass{article}
 
-\usepackage{amsthm, amssymb, amsfonts}                      %Make math beautiful
-\usepackage[fleqn]{amsmath}                                 %Please make equations left
- 
-\begin{document}
+% ======================================================
+% ===============    COMMANDS    =======================
+% ======================================================
 
-   
+    % =====  GENERAL MATH  ==========
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
+    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+
+    % =====  NUMBER THEORY  ==========
+    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
+
+    % === LINEAL ALGEBRA & VECTORS ===
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+
+    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
+        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    }
+    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
+        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    }
+    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
+        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+    }
+
 % ======================================================
 % ===============   NOTATITIONS  =======================
 % ======================================================
@@ -63,4 +85,3 @@
 
 
 
-\end{document}
