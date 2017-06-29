@@ -13,10 +13,13 @@
     \usepackage[spanish]{babel}                                     %Please use spanish
     \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
     \usepackage[T1]{fontenc}                                        %Please use spanish
+    \usepackage{textcmds}                                           %Allow us to use quoutes
+    \usepackage{changepage}                                         %Allow us to use identate paragraphs
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
     \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \usepackage{centernot}                                          %Allow me to negate a symbol
     \decimalpoint                                                   %Use decimal point
 
     % *********   GRAPHICS AND IMAGES *********
@@ -30,7 +33,9 @@
     \usepackage{tasks}                                              %Horizontal lists
     \usepackage{longtable}                                          %Lets make tables awesome
     \usepackage{booktabs}                                           %Lets make tables awesome
-
+    \usepackage{tabularx}                                           %Lets make tables awesome
+    \usepackage{multirow}                                           %Lets make tables awesome
+    \usepackage{multicol}                                           %Create multicolumns
 
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
@@ -67,10 +72,24 @@
 % ===========   COMMANDS    ==============
 % ========================================
 
+    % =====  GENERAL TEXT  ==========
+    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
+    \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
+    {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
+    {\end{adjustwidth}}                                             %This indentate a paragraph
+    \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
+    {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
+    {\end{footnotesize}\end{adjustwidth}}                           %that's it
+        
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+
+    % =====  LOGIC  ==================
+    \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
+    \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
+    \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
 
     % =====  NUMBER THEORY  ==========
     \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
