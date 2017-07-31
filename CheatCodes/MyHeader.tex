@@ -1,5 +1,5 @@
 % ****************************************************************************************
-% ************************      RELACIONES Y FUNCIONES        ****************************
+% ************************          SIMPLE EXAMPLE            ****************************
 % ****************************************************************************************
 
 
@@ -95,6 +95,7 @@
     \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
     \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
     \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
+    \newcommand \longto {\longrightarrow}                           %Use: \longto for a long arrow
 
     % =====  NUMBER THEORY  ==========
     \DeclareMathOperator \Naturals  {\mathbb{N}}                     %Use: \Naturals por Notation
@@ -113,6 +114,19 @@
     \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
         \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
     }
+    \newcommand{\bVector}[1]{                                       %Use: \bVector {Matrix Notation} use a brackets 
+        \ensuremath{\begin{bmatrix}#1\end{bmatrix}}                 %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
+    }
     \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
         \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
     }
+
+    % MATRIX
+    \makeatletter                                                   %Example: \begin{matrix}[cc|c]
+    \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c] {             %WTF! IS THIS
+        \hskip -\arraycolsep                                        %WTF! IS THIS
+        \let\@ifnextchar\new@ifnextchar                             %WTF! IS THIS
+        \array{#1}                                                  %WTF! IS THIS
+    }                                                               %WTF! IS THIS
+    \makeatother                                                    %WTF! IS THIS
+    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info}
