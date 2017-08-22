@@ -1,7 +1,6 @@
 % ****************************************************************************************
-% ************************          SIMPLE EXAMPLE            ****************************
+% ************************      NAME OF DOCUMENT      ************************************
 % ****************************************************************************************
-
 
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
@@ -165,3 +164,74 @@
     \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
 
 
+
+
+% =====================================================
+% ============        COVER PAGE       ================
+% =====================================================
+\begin{document}
+\begin{titlepage}
+
+    \center
+    % ============ UNIVERSITY NAME AND DATA =========
+    \textbf{\textsc{\Large Nombre de la Universidad / Proyecto}}\\[1.0cm] 
+    \textsc{\Large Nombre Materia}\\[1.0cm] 
+
+    % ============ NAME OF THE DOCUMENT  ============
+    \rule{\linewidth}{0.5mm} \\[1.0cm]
+        { \huge \bfseries Nombre del Documento}\\[1.0cm] 
+    \rule{\linewidth}{0.5mm} \\[2.0cm]
+    
+    % ====== SEMI TITLE ==========
+    {\LARGE Nombre Aburrido}\\[7cm] 
+    
+    % ============  MY INFORMATION  =================
+    \begin{center} \large
+    \textbf{\textsc{Autor:}}\\
+        Rosas Hernandez Oscar Andres
+    \end{center}
+
+    \vfill
+
+\end{titlepage}
+
+
+
+
+% ======================================================================================
+% ==================================     DOCUMENT  =====================================
+% ======================================================================================
+
+
+% =====================================================
+% ============    NOMBRE DE LA SECCION       ==========
+% =====================================================
+\section{Nombre del Articulo}
+
+    \subsection{Tema en Especial}
+
+
+
+
+
+
+% =====================================================
+% ============        BIBLIOGRAPHY   ==================
+% =====================================================
+\clearpage
+\bibliographystyle{plain}
+    \begin{thebibliography}{9}
+
+    % ============ REFERENCE #1 ========
+    \bibitem{Sitio1} 
+        PreguntasMathStack
+        \\\texttt{Referencia.com/Sectio}
+
+
+     
+
+\end{thebibliography}
+
+
+
+\end{document}
