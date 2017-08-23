@@ -6,7 +6,7 @@
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
     % *********   DOCUMENT ITSELF   **************
-    \documentclass[12pt, fleqn]{report}                             %Type of docuemtn and size of font and left eq
+    \documentclass[12pt, fleqn]{article}                             %Type of docuemtn and size of font and left eq
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
@@ -20,6 +20,7 @@
     \usepackage[T1]{fontenc}                                        %Please use spanish
     \usepackage{textcmds}                                           %Allow us to use quoutes
     \usepackage{changepage}                                         %Allow us to use identate paragraphs
+    \usepackage{lipsum}                                             %Allow to put dummy text
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{ntheorem, amsmath, amssymb, amsfonts}               %All fucking math, I want all!
@@ -50,16 +51,16 @@
     \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
 
     \lhead{                                                         %Left Header
-        \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
+        \hyperlink{section.\arabic{section}}                        %Make a link to the current chapter
         {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
     }
 
     \rhead{                                                         %Right Header
-        \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
+        \hyperlink{section.\arabic{section}.\arabic{subsection}}    %Make a link to the current chapter
             {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
     }
 
-    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}     %This will always be a footer  
+    \rfoot{\textsc{\small{Mensajito :D}}}                           %This will always be a footer  
 
     \fancyfoot[L]{                                                  %Algoritm for a changing footer
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
@@ -174,22 +175,35 @@
 
     \center
     % ============ UNIVERSITY NAME AND DATA =========
-    \textbf{\textsc{\Large Nombre de la Universidad / Proyecto}}\\[1.0cm] 
-    \textsc{\Large Nombre Materia}\\[1.0cm] 
+    \textsc{\Large Super Materia}\\[0.5cm] 
+    \textsc{\large Grupo}\\[1.5cm]
 
     % ============ NAME OF THE DOCUMENT  ============
     \rule{\linewidth}{0.5mm} \\[1.0cm]
-        { \huge \bfseries Nombre del Documento}\\[1.0cm] 
+        { \huge \bfseries El Mejor Reporte que has visto en tu Vida}\\[1.0cm] 
     \rule{\linewidth}{0.5mm} \\[2.0cm]
-    
-    % ====== SEMI TITLE ==========
-    {\LARGE Nombre Aburrido}\\[7cm] 
-    
+     
     % ============  MY INFORMATION  =================
-    \begin{center} \large
-    \textbf{\textsc{Autor:}}\\
-        Rosas Hernandez Oscar Andres
-    \end{center}
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+            \textbf{\textsc{Alumno:}}\\
+            Rosas Hernandez Oscar Andres
+        \end{flushleft}
+    \end{minipage}
+    ~
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushright} \large
+            \textbf{\textsc{Profesor: }}\\
+            Richard Stallman
+        \end{flushright}
+    \end{minipage}\\[3,5cm]
+
+    % ====== SEMI TITLE ==========
+    {\LARGE El mismo título pero mas aburrido}\\[4cm] 
+    
+    
+    % ====== DATE ================
+    {\large 1 de Enero de 1970}\\[2cm] 
 
     \vfill
 
@@ -201,37 +215,3 @@
 % ======================================================================================
 % ==================================     DOCUMENT  =====================================
 % ======================================================================================
-
-
-% =====================================================
-% ============    NOMBRE DE LA SECCION       ==========
-% =====================================================
-\section{Nombre del Articulo}
-
-    \subsection{Tema en Especial}
-
-
-
-
-
-
-% =====================================================
-% ============        BIBLIOGRAPHY   ==================
-% =====================================================
-\clearpage
-\bibliographystyle{plain}
-    \begin{thebibliography}{9}
-
-    % ============ REFERENCE #1 ========
-    \bibitem{Sitio1} 
-        PreguntasMathStack
-        \\\texttt{Referencia.com/Sectio}
-
-
-     
-
-\end{thebibliography}
-
-
-
-\end{document}
