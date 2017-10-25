@@ -1,0 +1,28 @@
+    % =====  CODE EDITOR =========
+    \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
+        backgroundcolor=\color{white},                              %Background Color  
+        basicstyle=\tiny\color{BlueGrey800MD},                      %Font color
+        commentstyle=\color{IndigoMD},                              %Comment color
+        stringstyle=\color{TealMD},                                 %String color
+        keywordstyle=\color{DeepPurpleMD},                          %keywords color
+        numberstyle=\tiny\color{TealMD},                            %Size of a number
+        frame=shadowbox,                                            %Adds a frame around the code
+        breakatwhitespace=true,                                     %Style                       
+        breaklines=true,                                            %Style                   
+        keepspaces=true,                                            %Style                   
+        numbers=left,                                               %Style                   
+        numbersep=10pt,                                             %Style 
+        xleftmargin=\parindent,                                     %Style 
+        tabsize=4                                                   %Style 
+    }
+ 
+    \lstset{style=CompilandoStyle}                                  %Use this style
+
+
+
+
+
+
+\lstinputlisting[language=C]{Code.c}
+\lstinputlisting[language=C, linerange={1-2}]{Code.c}
+
