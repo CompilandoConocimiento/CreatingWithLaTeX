@@ -175,13 +175,15 @@
     \newcommand \Partial[2] {\dfrac{\partial #1}{\partial #2}}      %Use: \Partial for simple use
 
     % =====  GENERAL COLOR  =========
-    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
-    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
     \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
-    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
-    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
     \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
     \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
+    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D
+    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
+    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
+    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D
+    \definecolor{Lime300MD}{HTML}{E6EE9C}                           %Use: Color :D
 
     \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
         \leavevmode\color{#1}\ignorespaces}                         %That's is!
@@ -190,13 +192,14 @@
     % =====  CODE EDITOR =========
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
         backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
-        basicstyle=\color{white}\fontsize{9}{11}\ttfamily,          %Style
-        commentstyle=\color{BlueGrey100MD},                         %Comment color
-        stringstyle=\color{TealMD},                                 %String color
-        keywordstyle=\color{Green100MD},                            %keywords color
+        basicstyle=\tiny\color{white},                              %Font color
+        commentstyle=\color{BlueGrey200MD},                         %Comment color
+        stringstyle=\color{Lime300MD},                              %String color
+        keywordstyle=\color{Blue300MD},                             %keywords color
         numberstyle=\tiny\color{TealMD},                            %Size of a number
         frame=shadowbox,                                            %Adds a frame around the code
-        breakatwhitespace=true,                                     %Style                       
+        breakatwhitespace=true,                                     %Style   
+        showstringspaces=false,                                     %Hate those spaces                  
         breaklines=true,                                            %Style                   
         keepspaces=true,                                            %Style                   
         numbers=left,                                               %Style                   
@@ -206,4 +209,7 @@
     }
  
     \lstset{style=CompilandoStyle}                                  %Use this style
+
+
+
 
