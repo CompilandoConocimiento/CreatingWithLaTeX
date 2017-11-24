@@ -44,5 +44,43 @@
  
 \end{tabular}
 
+% ===================================
+% ========       TABLE        =======
+% ===================================
+\begin{table}[ht]
+    \begin{tabular}{|m{16em}|m{16em}|@{}m{0pt}@{}}
+        \hline
+        % ====  HEADERS ===
+        \large{$f(t)$}          & \large{$\FourierT{f(t)}$}         &\\[2em]    \hline\hline
+        
+        % ====  BODY  ===
+        \multicolumn{3}{|c|}{Funciones y Transformadas Genéricas}   \\          \hline
+        $f(t)$                  & $F(w)$                            &\\[1em]    \hline
+        $g(t)$                  & $G(w)$                            &\\[1em]    \hline\hline
+
+        \multicolumn{3}{|c|}{Funciones y Transformadas Famosas}     \\          \hline
+        $u(t)e^{-\alpha t}$     & $\frac{1}{\alpha + iw}$           &\\[1em]    \hline
+        $k[u(t+d) -u(t-d)]$     & $\frac{2k}{w} \Sin{wd}$           &\\[1em]    \hline
+        $\delta(t)        $     & $1                    $           &\\[1em]    \hline\hline
+
+        \multicolumn{3}{|c|}{Corrimiento del Tiempo y Frecuencia}   \\          \hline
+        $f(t - t_0)       $     & $e^{-iwt_0} F(w)       $          &\\[1em]    \hline
+        $e^{iw_0t} f(t)   $     & $F(w - w_0)            $          &\\[1em]    \hline\hline
+
+        \multicolumn{3}{|c|}{Gran Teorema de la Simetria}          \\           \hline
+        $F(t)             $     & $2\pi f(-w)             $        &\\[1em]     \hline\hline
+        $1                $     & $2\pi \delta(-w)        $        &\\[1em]     \hline\hline
+        $\frac{1}{\alpha + iw}$ & $2\pi u(-w) e^{\alpha w}$        &\\[1em]     \hline\hline
+
+        \multicolumn{3}{|c|}{Teorema de Escalamiento}               \\          \hline
+        $f(at)            $     & $\frac{1}{|a|} F(\frac{w}{a})$   &\\[1em]     \hline
+        $f(-t)            $     & $F(-w)$                          &\\[1em]     \hline
+    \end{tabular}
+\end{table}
+
+
+
+
+
 
 
