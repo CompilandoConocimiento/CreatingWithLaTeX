@@ -35,7 +35,7 @@
     \graphicspath{ {Graphics/} }                                    %Where are the images :D
 
     % *********   LISTS AND TABLES ***********
-    \usepackage{listings}                                           %We will be using code here
+    \usepackage{listings, listingsutf8}                             %We will be using code here
     \usepackage[inline]{enumitem}                                   %We will need to enumarate
     \usepackage{tasks}                                              %Horizontal lists
     \usepackage{longtable}                                          %Lets make tables awesome
@@ -227,7 +227,8 @@
         numbers=left,                                               %Style                   
         numbersep=10pt,                                             %Style 
         xleftmargin=\parindent,                                     %Style 
-        tabsize=4                                                   %Style 
+        tabsize=4                                                   %Style
+        inputencoding=utf8/latin1                                   %Allow me to use special chars
     }
  
     \lstset{style=CompilandoStyle}                                  %Use this style
