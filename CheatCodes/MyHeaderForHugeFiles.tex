@@ -172,8 +172,9 @@
     \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
 
     % ====== TRANSFORMS =====
-    \newcommand{\FourierT}[1]                                       %Use: \FourierT {Funtion} 
-        {\mathscr{F} \left\{ #1 \right\} }                          %Use: \FourierT {Funtion}
+    \newcommand{\FourierT}[1]{\mathscr{F} \left\{ #1 \right\} }     %Use: \FourierT {Funtion}
+    \newcommand{\InvFourierT}[1]{\mathscr{F}^{-1}\left\{#1\right\}} %Use: \InvFourierT {Funtion}
+
 
     % === CALCULUS ===
     \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
