@@ -80,18 +80,15 @@
 % ===========   COMMANDS    ==============
 % ========================================
 
-    % =====  GENERAL TEXT  ====================
-    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
-    \newcommand \Over {\overline}                                   %Use: \Bar to use just for short
-    \newcommand \ForceNewLine {$\Space$\\}                          %Use it in theorems for example
-    
-    % =====  NEW ENVIRONMENTS  ================
+    % =========================================
+    % =======   NEW ENVIRONMENTS   ============
+    % =========================================
     \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
-    {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
-    {\end{adjustwidth}}                                             %This indentate a paragraph
+        {\begin{adjustwidth}{#1}{}}                                 %If you dont put nothing i will use 0.75 em
+        {\end{adjustwidth}}                                         %This indentate a paragraph
     \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
-    {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
-    {\end{footnotesize}\end{adjustwidth}}                           %that's it
+        {\begin{adjustwidth}{#1}{}\begin{footnotesize}}             %footnotesize size of letter by default
+        {\end{footnotesize}\end{adjustwidth}}                       %that's it
 
     \newenvironment{MultiLineEquation}[1]                           %Use: To create MultiLine equations
         {\begin{equation}\begin{alignedat}{#1}}                     %Use: \begin{Multi..}{Num. de Columnas}
@@ -99,49 +96,83 @@
     \newenvironment{MultiLineEquation*}[1]                          %Use: To create MultiLine equations
         {\begin{equation*}\begin{alignedat}{#1}}                    %Use: \begin{Multi..}{Num. de Columnas}
         {\end{alignedat}\end{equation*}}                            %And.. that's it!
+    
 
-    % =====  GENERAL MATH  ====================
-    \DeclareMathOperator \MegaSpace {\quad \quad}                   %Use: \MegaSpace for a cool mega mega space
+    % =========================================
+    % == GENERAL TEXT & SYMBOLS ENVIRONMENTS ==
+    % =========================================
+    
+    % =====  TEXT  ======================
+    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
+    \newcommand \Over {\overline}                                   %Use: \Bar to use just for short
+    \newcommand \ForceNewLine {$\Space$\\}                          %Use it in theorems for example
+
+    % =====  SPACES  ====================
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
+    \DeclareMathOperator \MegaSpace {\quad \quad}                   %Use: \MegaSpace for a cool mega mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
-    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+    
+    % =====  MATH TEXT  =================
+    \newcommand \Such {\MiniSpace | \MiniSpace}                     %Use: \Such like in sets
     \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
     \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
-    \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}               %Use: \abs{expression} for |x|
-    \newcommand{\Abs}[1]{\left\lVert #1 \right\lVert}               %Use: \Abs{expression} for ||x||
-
+    
+    % =====  THEOREMS  ==================
     \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
     \newtheorem{Corollary}{Colorario}[Theorem]                      %Use: \begin{Corollary}[Name]\label{Nombre}...
     \newtheorem{Lemma}[Theorem]{Lemma}                              %Use: \begin{Lemma}[Name]\label{Nombre}...
     \newtheorem{Definition}{Definición}[section]                    %Use: \begin{Definition}[Name]\label{Nombre}...
 
-    % =====  CONTAINERS   ====================
-    \newcommand{\Set}[1]{\left\{ \MiniSpace #1 \MiniSpace \right\}} %Use: \Set {Info}
-    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
-    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} 
-    \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
+    % =====  LOGIC  =====================
+    \newcommand \lIff {\leftrightarrow}                             %Use: \lIff for logic iff
+    \newcommand \lEqual {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lEqual for a logic double arrow
+    \newcommand \lInfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lInfire for a logic infire
+    \newcommand \lLongTo {\longrightarrow}                          %Use: \lLongTo for a long arrow
 
-    % =====  LOGIC  ==========================
-    \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
-    \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
-    \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
-    \newcommand \longto {\longrightarrow}                           %Use: \longto for a long arrow
-
-    % =====  FAMOUS SETS  =====================
+    % =====  FAMOUS SETS  ===============
     \DeclareMathOperator \Naturals     {\mathbb{N}}                 %Use: \Naturals por Notation
-    \DeclareMathOperator \Primes       {\mathbb{P}}                 %Use: \Naturals por Notation
+    \DeclareMathOperator \Primes       {\mathbb{P}}                 %Use: \Primes por Notation
     \DeclareMathOperator \Integers     {\mathbb{Z}}                 %Use: \Integers por Notation
     \DeclareMathOperator \Racionals    {\mathbb{Q}}                 %Use: \Racionals por Notation
     \DeclareMathOperator \Reals        {\mathbb{R}}                 %Use: \Reals por Notation
     \DeclareMathOperator \Complexs     {\mathbb{C}}                 %Use: \Complex por Notation
-    \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \Complex por Notation
+    \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \GenericField por Notation
 
-    % === LINEAL ALGEBRA & VECTORS =============
-    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    % =====  CONTAINERS   ===============
+    \newcommand{\Set}[1]{\left\{ \; #1 \; \right\}}                 %Use: \Set {Info} for INTELLIGENT space 
+    \newcommand{\bigSet}[1]{\big\{ \; #1 \; \big\}}                 %Use: \bigSet  {Info} for space 
+    \newcommand{\BigSet}[1]{\Big\{ \; #1 \; \Big\}}                 %Use: \BigSet  {Info} for space 
+    \newcommand{\biggSet}[1]{\bigg\{ \; #1 \; \bigg\}}              %Use: \biggSet {Info} for space 
+    \newcommand{\BiggSet}[1]{\Bigg\{ \; #1 \; \Bigg\}}              %Use: \BiggSet {Info} for space 
+    
+    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} for INTELLIGENT space
+    \newcommand{\bigBrackets}[1]{\big[ \; #1 \; \big]}              %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigBrackets}[1]{\Big[ \; #1 \; \Big]}              %Use: \BigBrackets  {Info} for space 
+    \newcommand{\biggBrackets}[1]{\bigg[ \; #1 \; \bigg]}           %Use: \biggBrackets {Info} for space 
+    \newcommand{\BiggBrackets}[1]{\Bigg[ \; #1 \; \Bigg]}           %Use: \BiggBrackets {Info} for space 
+    
+    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} for INTELLIGENT space
+    \newcommand{\bigWrap}[1]{\big( \; #1 \; \big)}                  %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigWrap}[1]{\Big( \; #1 \; \Big)}                  %Use: \BigBrackets  {Info} for space 
+    \newcommand{\biggWrap}[1]{\bigg( \; #1 \; \bigg)}               %Use: \biggBrackets {Info} for space 
+    \newcommand{\BiggWrap}[1]{\Bigg( \; #1 \; \Bigg)}               %Use: \BiggBrackets {Info} for space 
+
+    % =====  BETTERS MATH COMMANDS   =====
+    \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
+
+    % =========================================
+    % ====   LINEAL ALGEBRA & VECTORS    ======
+    % =========================================
+
+    % ===== MAGNITUDE  ===================
+    \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}               %Use: \abs{expression} for |x|
+    \newcommand{\Abs}[1]{\left\lVert #1 \right\lVert}               %Use: \Abs{expression} for ||x||
     \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
+    
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
     \newcommand{\bVec}[1]{\mathbf{#1}}                              %Use for bold type of vector
     \newcommand{\lVec}[1]{\overrightarrow{#1}}                      %Use for a long arrow over a vector
-    \newcommand{\uVec}[1]{\boldsymbol{\hat{\textbf{#1}}}}           %Use: Unitary Vector Example: $\uVec{i}
+    \newcommand{\uVec}[1]{\mathbf{\hat{#1}}}                        %Use: Unitary Vector Example: $\uVec{i}
 
     % === WRAPPERS FOR COLUMN VECTOR ===
     \newcommand{\pVector}[1]                                        %Use: \pVector {Matrix Notation} use parentesis
@@ -162,7 +193,11 @@
     }                                                               %WTF! IS THIS
     \makeatother                                                    %WTF! IS THIS
 
-    % ===== TRIGONOMETRIC FUNCTIONS  ==========
+    % =========================================
+    % =======   FAMOUS FUNCTIONS   ============
+    % =========================================
+
+    % == TRIGONOMETRIC FUNCTIONS  ====
     \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
     \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
     \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
@@ -171,41 +206,40 @@
     \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
     \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
 
-    % === COMPLEX ANALYSIS TRIG ===
+    % === COMPLEX ANALYSIS TRIG ======
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
-    \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
-    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
+    \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same with parantesis
+    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same with Brackets
 
 
-    % === CALCULUS ==========================
-    
-    % ====== TRANSFORMS =====
+    % =========================================
+    % ===========     CALCULUS     ============
+    % =========================================
+
+    % ====== TRANSFORMS =============
     \newcommand{\FourierT}[1]{\mathscr{F} \left\{ #1 \right\} }     %Use: \FourierT {Funtion}
     \newcommand{\InvFourierT}[1]{\mathscr{F}^{-1}\left\{#1\right\}} %Use: \InvFourierT {Funtion}
 
-    % ====== DERIVATE ======
-    \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
-    \newcommand \Derivate[2]                                        %Complete Derivate -- [f(x)][x]
-        {\dfrac{d \; #1}{d #2}}                                     %Use: \Partial for simple use
+    % ====== DERIVATIVES ============
+    \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate[var] for simple use [var]
+    \newcommand \Derivate[2] {\dfrac{d \; #1}{d #2}}                %Use: \Derivate [f(x)][x]
+    \newcommand \MiniUpperDerivate[2] {\dfrac{d^{#2}}{d#1^{#2}}}    %Mini Derivate High Orden Derivate -- [x][pow]
+    \newcommand \UpperDerivate[3] {\dfrac{d^{#3} \; #1}{d#2^{#3}}}  %Complete High Orden Derivate -- [f(x)][x][pow]
     
-    \newcommand \MiniUpperDerivate[2]                               %Mini Derivate High Orden Derivate -- [x][1]
-        {\dfrac{d^{#2}}{d#1^{#2}}}                                  %Mini Derivate High Orden Derivate
-    \newcommand \UpperDerivate[3]                                   %Complete High Orden Derivate -- [f(x)][x][1]
-        {\dfrac{d^{#3} \; #1}{d#2^{#3}}}                            %Use: \UpperDerivate for simple use
-    
-    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}} %Use: \MiniDerivate for simple use
-    \newcommand \Partial[2]                                        %Complete Derivate -- [f(x)][x]
-        {\dfrac{\partial \; #1}{\partial #2}}                      %Use: \Partial for simple use
-    
-    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][1] 
+    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}}  %Use: \MiniDerivate for simple use [var]
+    \newcommand \Partial[2] {\dfrac{\partial \; #1}{\partial #2}}   %Complete Partial Derivate -- [f(x)][x]
+    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][pow] 
         {\dfrac{\partial^{#2}}{\partial #1^{#2}}}                   %Mini Derivate High Orden Derivate
-    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][1]
+    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][pow]
         {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
 
     \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
 
+    % =========================================
+    % ========    GENERAL STYLE     ===========
+    % =========================================
     
-    % =====  GENERAL COLOR  ==================
+    % =====  COLORS ==================
     \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
     \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
     \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
@@ -216,10 +250,10 @@
     \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D
     \definecolor{Lime300MD}{HTML}{E6EE9C}                           %Use: Color :D
 
-    \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
-        \leavevmode\color{#1}\ignorespaces}                         %That's is!
+    \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
+        { \leavevmode\color{#1}\ignorespaces }                      %That's is!
 
-    % =====  CODE EDITOR =========
+    % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
         backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
         basicstyle=\tiny\color{white},                              %Font color
