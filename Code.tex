@@ -1,23 +1,118 @@
-    % =====  CODE EDITOR =========
+    % =========================================
+    % ========    GENERAL STYLE     ===========
+    % =========================================
+    
+    % =====  COLORS ==================
+    \definecolor{RedMD}{HTML}{F44336}                               %Use: Color :D        
+    \definecolor{Red100MD}{HTML}{FFCDD2}                            %Use: Color :D        
+    \definecolor{Red200MD}{HTML}{EF9A9A}                            %Use: Color :D        
+    \definecolor{Red300MD}{HTML}{E57373}                            %Use: Color :D        
+    \definecolor{Red700MD}{HTML}{D32F2F}                            %Use: Color :D 
+
+    \definecolor{PurpleMD}{HTML}{9C27B0}                            %Use: Color :D        
+    \definecolor{Purple100MD}{HTML}{E1BEE7}                         %Use: Color :D        
+    \definecolor{Purple200MD}{HTML}{EF9A9A}                         %Use: Color :D        
+    \definecolor{Purple300MD}{HTML}{BA68C8}                         %Use: Color :D        
+    \definecolor{Purple700MD}{HTML}{7B1FA2}                         %Use: Color :D 
+
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D        
+    \definecolor{Indigo100MD}{HTML}{C5CAE9}                         %Use: Color :D        
+    \definecolor{Indigo200MD}{HTML}{9FA8DA}                         %Use: Color :D        
+    \definecolor{Indigo300MD}{HTML}{7986CB}                         %Use: Color :D        
+    \definecolor{Indigo700MD}{HTML}{303F9F}                         %Use: Color :D 
+
+    \definecolor{BlueMD}{HTML}{2196F3}                              %Use: Color :D        
+    \definecolor{Blue100MD}{HTML}{BBDEFB}                           %Use: Color :D        
+    \definecolor{Blue200MD}{HTML}{90CAF9}                           %Use: Color :D        
+    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D        
+    \definecolor{Blue700MD}{HTML}{1976D2}                           %Use: Color :D        
+    \definecolor{Blue900MD}{HTML}{0D47A1}                           %Use: Color :D  
+
+    \definecolor{CyanMD}{HTML}{00BCD4}                              %Use: Color :D        
+    \definecolor{Cyan100MD}{HTML}{B2EBF2}                           %Use: Color :D        
+    \definecolor{Cyan200MD}{HTML}{80DEEA}                           %Use: Color :D        
+    \definecolor{Cyan300MD}{HTML}{4DD0E1}                           %Use: Color :D        
+    \definecolor{Cyan700MD}{HTML}{0097A7}                           %Use: Color :D        
+    \definecolor{Cyan900MD}{HTML}{006064}                           %Use: Color :D 
+
+    \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
+    \definecolor{Teal100MD}{HTML}{B2DFDB}                           %Use: Color :D        
+    \definecolor{Teal200MD}{HTML}{80CBC4}                           %Use: Color :D        
+    \definecolor{Teal300MD}{HTML}{4DB6AC}                           %Use: Color :D        
+    \definecolor{Teal700MD}{HTML}{00796B}                           %Use: Color :D        
+    \definecolor{Teal900MD}{HTML}{004D40}                           %Use: Color :D 
+
+    \definecolor{GreenMD}{HTML}{4CAF50}                             %Use: Color :D        
+    \definecolor{Green100MD}{HTML}{C8E6C9}                          %Use: Color :D        
+    \definecolor{Green200MD}{HTML}{A5D6A7}                          %Use: Color :D        
+    \definecolor{Green300MD}{HTML}{81C784}                          %Use: Color :D        
+    \definecolor{Green700MD}{HTML}{388E3C}                          %Use: Color :D        
+    \definecolor{Green900MD}{HTML}{1B5E20}                          %Use: Color :D
+
+    \definecolor{AmberMD}{HTML}{FFC107}                             %Use: Color :D        
+    \definecolor{Amber100MD}{HTML}{FFECB3}                          %Use: Color :D        
+    \definecolor{Amber200MD}{HTML}{FFE082}                          %Use: Color :D        
+    \definecolor{Amber300MD}{HTML}{FFD54F}                          %Use: Color :D        
+    \definecolor{Amber700MD}{HTML}{FFA000}                          %Use: Color :D        
+    \definecolor{Amber900MD}{HTML}{FF6F00}                          %Use: Color :D
+
+    \definecolor{BlueGreyMD}{HTML}{607D8B}                          %Use: Color :D        
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D        
+    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D        
+    \definecolor{BlueGrey300MD}{HTML}{90A4AE}                       %Use: Color :D        
+    \definecolor{BlueGrey700MD}{HTML}{455A64}                       %Use: Color :D        
+    \definecolor{BlueGrey900MD}{HTML}{263238}                       %Use: Color :D        
+
+    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
+
+    \newcommand{\Color}[2]{\textcolor{#1}{#2}}                      %Simple color environment
+    \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
+        { \leavevmode\color{#1}\ignorespaces }                      %That's is!
+
+    % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
-        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
-        basicstyle=\tiny\color{white},                              %Font color
-        commentstyle=\color{BlueGrey200MD},                         %Comment color
-        stringstyle=\color{Lime300MD},                              %String color
-        keywordstyle=\color{Blue300MD},                             %keywords color
-        numberstyle=\tiny\color{TealMD},                            %Size of a number
-        frame=shadowbox,                                            %Adds a frame around the code
-        breakatwhitespace=true,                                     %Style   
-        showstringspaces=false,                                     %Hate those spaces                  
-        breaklines=true,                                            %Style                   
-        keepspaces=true,                                            %Style                   
-        numbers=left,                                               %Style                   
-        numbersep=10pt,                                             %Style 
-        xleftmargin=\parindent,                                     %Style 
-        tabsize=4                                                   %Style 
+        backgroundcolor     = \color{BlueGrey900MD},                %Background Color  
+        basicstyle          = \tiny\color{white},                   %Style of text
+        commentstyle        = \color{BlueGrey200MD},                %Comment style
+        stringstyle         = \color{Green300MD},                   %String style
+        keywordstyle        = \color{Blue300MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = shadowbox,                            %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = left,                                 %Style                   
+        numbersep           = 10pt,                                 %Style 
+        xleftmargin         = \parindent,                           %Style 
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
     }
  
-    \lstset{style=CompilandoStyle}                                  %Use this style
+    \lstset{style = CompilandoStyle}                                %Use this style
 
+
+
+
+
+
+
+
+
+
+% ================================================================
+% =================       INSERT CODE        =====================
+% ================================================================
 \lstinputlisting[language=C]{Code.c}
-\lstinputlisting[language=C, linerange={1-2}]{Code.c}
+
+\lstinputlisting[language=C, linerange={a-b, c-d}, gobble=x]{Code.c}
+
+\begin{lstlisting}[language=C, linerange={a-b, c-d}, gobble=x]
+Code(fun T<x>A) {
+    ...
+}
+\end{lstlisting}
+
+
+

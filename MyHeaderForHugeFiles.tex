@@ -214,13 +214,13 @@
     % =========================================
 
     % == TRIGONOMETRIC FUNCTIONS  ====
-    \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
-    \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
-    \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Cos}[1] {\cos\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Sin}[1] {\sin\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Tan}[1] {tan\Wrap{#1}}                             %Simple wrappers
     
-    \newcommand{\Sec}[1]{sec\Wrap{#1}}                              %Simple wrappers
-    \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
-    \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Sec}[1] {sec\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Csc}[1] {csc\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Cot}[1] {cot\Wrap{#1}}                             %Simple wrappers
 
     % === COMPLEX ANALYSIS TRIG ======
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
@@ -318,31 +318,29 @@
 
     \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
 
+    \newcommand{\Color}[2]{\textcolor{#1}{#2}}                      %Simple color environment
     \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
         { \leavevmode\color{#1}\ignorespaces }                      %That's is!
 
     % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
-        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
-        basicstyle=\tiny\color{white},                              %Font color
-        commentstyle=\color{BlueGrey200MD},                         %Comment color
-        stringstyle=\color{Green300MD},                             %String color
-        keywordstyle=\color{Blue300MD},                             %keywords color
-        numberstyle=\tiny\color{TealMD},                            %Size of a number
-        frame=shadowbox,                                            %Adds a frame around the code
-        breakatwhitespace=true,                                     %Style   
-        showstringspaces=false,                                     %Hate those spaces                  
-        breaklines=true,                                            %Style                   
-        keepspaces=true,                                            %Style                   
-        numbers=left,                                               %Style                   
-        numbersep=10pt,                                             %Style 
-        xleftmargin=\parindent,                                     %Style 
-        tabsize=4,                                                  %Style
-        inputencoding=utf8/latin1                                   %Allow me to use special chars
+        backgroundcolor     = \color{BlueGrey900MD},                %Background Color  
+        basicstyle          = \tiny\color{white},                   %Style of text
+        commentstyle        = \color{BlueGrey200MD},                %Comment style
+        stringstyle         = \color{Green300MD},                   %String style
+        keywordstyle        = \color{Blue300MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = shadowbox,                            %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = left,                                 %Style                   
+        numbersep           = 10pt,                                 %Style 
+        xleftmargin         = \parindent,                           %Style 
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
     }
  
-    \lstset{style=CompilandoStyle}                                  %Use this style
-
-
-
-
+    \lstset{style = CompilandoStyle}                                %Use this style

@@ -3,9 +3,8 @@
 ## Templates: 
 - **Header for General Files**: [Header.tex](MyHeaderForHugeFiles.tex)
 - **Codes for Math and Tables**: [Math.tex](Math.tex)
+- **Codes for Code Input**: [Code.tex](Code.tex)
 - **Insert Image of Wrap it around text**: [Images.tex](Images.tex)
-
-
-## Templates of Covers:
-- **Original Cover**: [See Result](CoverBlackAndWhite.pdf) - [See Code](CoverBlackAndWhite.tex)
-- **Color Cover**: [See Result](CoverColor.pdf) - [See Code](CoverColor.tex)
+- Templates of Cover Page:
+    - **Original Cover**: [See Result](CoverBlackAndWhite.pdf) - [See Code](CoverBlackAndWhite.tex)
+    - **Color Cover**: [See Result](CoverColor.pdf) - [See Code](CoverColor.tex)
