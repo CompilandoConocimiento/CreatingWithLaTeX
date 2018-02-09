@@ -6,13 +6,18 @@
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
+    
+    % *********   HEADERS AND FOOTERS ********
+    \def\ProjectAuthorLink{https://github.com/SoyOscarRH}           %Just to keep it in line
+    \def\ProjectNameLink{\ProjectAuthorLink/Proyect}                %Link to Proyect
+
     % *********   DOCUMENT ITSELF   **************
     \documentclass[12pt, fleqn]{report}                             %Type of docuemtn and size of font and left eq
-    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
+    \usepackage[margin = 1.2in]{geometry}                           %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
     \usepackage{pdfpages}                                           %Create MetaData for a PDF and LINKS!
-    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
+    \hypersetup{pageanchor = false}                                 %Solve 'double page 1' warnings in build
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
     \author{Oscar Andrés Rosas}                                     %Who I am
 
@@ -46,10 +51,6 @@
     \usepackage{tabularx}                                           %Lets make tables awesome
     \usepackage{multirow}                                           %Lets make tables awesome
     \usepackage{multicol}                                           %Create multicolumns
-
-    % *********   HEADERS AND FOOTERS ********
-    \def\ProjectAuthorLink{https://github.com/SoyOscarRH}           %Just to keep it in line
-    \def\ProjectNameLink{\ProjectAuthorLink/Proyect}                %Link to Proyect
 
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
@@ -146,6 +147,7 @@
     \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \GenericField por Notation
     \DeclareMathOperator \VectorSet    {\mathbb{V}}                 %Use: \VectorSet por Notation
     \DeclareMathOperator \SubVectorSet {\mathbb{W}}                 %Use: \SubVectorSet por Notation
+    \DeclareMathOperator \Polynomials  {\mathbb{P}}                 %Use: \Polynomials por Notation
 
     % =====  CONTAINERS   ===============
     \newcommand{\Set}[1]{\left\{ \; #1 \; \right\}}                 %Use: \Set {Info} for INTELLIGENT space 
