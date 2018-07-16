@@ -52,6 +52,10 @@
     \usepackage{multirow}                                           %Lets make tables awesome
     \usepackage{multicol}                                           %Create multicolumns
 
+    % *********   REMOVE SOME ERRORS **********
+    \hbadness=10000                                                 %Ignore \vbox and \hbox warings
+    \hfuzz=\maxdimen\newdimen\hfuzz                                 %Ignore \vbox and \hbox warings
+
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
     \pagestyle{fancy}                                               %Lets make awesome headers/footers
@@ -73,7 +77,7 @@
 
     \fancyfoot[L]{                                                  %Algoritm for a changing footer
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
-            {\href{https://compilandoconocimiento.com/nosotros/}    %DO THIS:
+            {\href{https://SoyOscarRH.github.io/}                   %DO THIS:
                 {\footnotesize                                      %Send the page
                     {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
             {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
@@ -390,4 +394,3 @@
     }
  
     \lstset{style = CompilandoStyle}                                %Use this style
-
