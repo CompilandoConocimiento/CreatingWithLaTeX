@@ -1,10 +1,38 @@
-# ![alt text](https://secure.gravatar.com/blavatar/4560c02ab420ca3cefc52ab44e8aefc1?s=32) Templates for Creating Docs with LaTeX
+![](Graphics/CreatingWithLaTeX.png)
+
+## What is this?
+This repo is a collection of many utilities that we use as a
+team to create our LaTeX books and reports.
+
+You can copy and use all of this code, use it to create awesome things, we believe in you.
 
 ## Templates: 
-- **Header for General Files**: [Header.tex](MyHeaderForHugeFiles.tex)
-- **Codes for Math and Tables**: [Math.tex](Math.tex)
-- **Codes for Code Input**: [Code.tex](Code.tex)
-- **Insert Image of Wrap it around text**: [Images.tex](Images.tex)
-- Templates of Cover Page:
-    - **Original Cover**: [See Result](CoverBlackAndWhite.pdf) - [See Code](CoverBlackAndWhite.tex)
-    - **Color Cover**: [See Result](CoverColor.pdf) - [See Code](CoverColor.tex)
+- **Header for OUR Books**: [Header.tex](MyHeaderForHugeFiles.tex)
+- **Codes for math and tables**: [Math.tex](Math.tex)
+- **Codes for code input**: [Code.tex](Code.tex)
+- **Insert image of wrap it around text**: [Images.tex](Images.tex)
+
+## Compilando Commands
+To create this books we create many new commands  (specially about math) we will love if you
+use them. You can find them here 
+[Commands.tex](Commands.tex) 
+
+Here are some that we think you find useful:
+
+![](Graphics/Examples.png)
+
+## Cover:
+
+#### Original Cover
+[See Result](CoverBlackAndWhite.pdf) -
+[See Code](CoverBlackAndWhite.tex)
+
+![](Graphics/CoverBlackAndWhite.png)
+
+
+####Color Cover
+[See Result](CoverColor.pdf) - 
+[See Code](CoverColor.tex)
+
+![](Graphics/CoverColor.png)
+

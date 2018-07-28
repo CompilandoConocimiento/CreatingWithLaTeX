@@ -1,0 +1,193 @@
+% =======================================================
+% ===================   COMMANDS    =====================
+% =======================================================
+
+    % =========================================
+    % =======   NEW ENVIRONMENTS   ============
+    % =========================================
+    \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
+        {\begin{adjustwidth}{#1}{}}                                 %If you dont put nothing i will use 0.75 em
+        {\end{adjustwidth}}                                         %This indentate a paragraph
+    \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
+        {\begin{adjustwidth}{#1}{}\begin{footnotesize}}             %footnotesize size of letter by default
+        {\end{footnotesize}\end{adjustwidth}}                       %that's it
+
+    \newenvironment{MultiLineEquation}[1]                           %Use: To create MultiLine equations
+        {\begin{equation}\begin{alignedat}{#1}}                     %Use: \begin{Multi..}{Num. de Columnas}
+        {\end{alignedat}\end{equation}}                             %And.. that's it!
+    \newenvironment{MultiLineEquation*}[1]                          %Use: To create MultiLine equations
+        {\begin{equation*}\begin{alignedat}{#1}}                    %Use: \begin{Multi..}{Num. de Columnas}
+        {\end{alignedat}\end{equation*}}                            %And.. that's it!
+
+
+    % =========================================
+    % == GENERAL TEXT & SYMBOLS ENVIRONMENTS ==
+    % =========================================
+
+    % =====  TEXT  ======================
+    \newcommand \Quote              {\qq}                           %Use: \Quote to use quotes
+    \newcommand \Over               {\overline}                     %Use: \Bar to use just for short
+    \newcommand \ForceNewLine       {$\Space$\\}                    %Use it in theorems for example
+    \newcommand \ForceColumnBreak   {\vfill\null\columnbreak}       %Use only in multicols
+
+    % =====  SPACES  ====================
+    \DeclareMathOperator \Space     {\quad}                         %Use: \Space for a cool mega space
+    \DeclareMathOperator \MegaSpace {\quad \quad}                   %Use: \MegaSpace for a cool mega mega space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
+
+    % =====  MATH TEXT  =================
+    \newcommand \Such           {\MiniSpace | \MiniSpace}           %Use: \Such like in sets
+    \newcommand \Also           {\MiniSpace \text{y} \MiniSpace}    %Use: \Also so it's look cool
+    \newcommand \Remember[1]    {\Space\text{\scriptsize{#1}}}      %Use: \Remember so it's look cool
+
+    % =====  THEOREMS: IN SPANISH :0  ===
+    \newtheorem{Theorem}        {Teorema}[section]                  %Use: \begin{Theorem}[Name]\label{Nombre}...
+    \newtheorem{Corollary}      {Colorario}[Theorem]                %Use: \begin{Corollary}[Name]\label{Nombre}...
+    \newtheorem{Lemma}[Theorem] {Lemma}                             %Use: \begin{Lemma}[Name]\label{Nombre}...
+    \newtheorem{Definition}     {Definición}[section]               %Use: \begin{Definition}[Name]\label{Nombre}...
+    \theoremstyle{break}                                            %THEOREMS START 1 SPACE AFTER Fuck!
+
+    % =====  LOGIC  =====================
+    \newcommand \lIff    {\leftrightarrow}                          %Use: \lIff for logic iff
+    \newcommand \lEqual  {\MiniSpace \Leftrightarrow \MiniSpace}    %Use: \lEqual for a logic double arrow
+    \newcommand \lInfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lInfire for a logic infire
+    \newcommand \lLongTo {\longrightarrow}                          %Use: \lLongTo for a long arrow
+
+    % =====  FAMOUS SETS  ===============
+    \DeclareMathOperator \Naturals     {\mathbb{N}}                 %Use: \Naturals por Notation
+    \DeclareMathOperator \Primes       {\mathbb{P}}                 %Use: \Primes por Notation
+    \DeclareMathOperator \Integers     {\mathbb{Z}}                 %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals    {\mathbb{Q}}                 %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals        {\mathbb{R}}                 %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs     {\mathbb{C}}                 %Use: \Complex por Notation
+    \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \GenericField por Notation
+    \DeclareMathOperator \VectorSet    {\mathbb{V}}                 %Use: \VectorSet por Notation
+    \DeclareMathOperator \SubVectorSet {\mathbb{W}}                 %Use: \SubVectorSet por Notation
+    \DeclareMathOperator \Polynomials  {\mathbb{P}}                 %Use: \Polynomials por Notation
+    \DeclareMathOperator \VectorSpace  {\VectorSet_{\GenericField}} %Use: \VectorSpace por Notation
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \DeclareMathOperator \LinTrans      {\mathcal{T}}               %Use: \LinTrans for a cool T
+    \DeclareMathOperator \Laplace       {\mathcal{L}}               %Use: \LinTrans for a cool T
+
+    % =====  CONTAINERS   ===============
+    \newcommand{\Set}[1]            {\left\{ \; #1 \; \right\}}     %Use: \Set {Info} for INTELLIGENT space 
+    \newcommand{\bigSet}[1]         {\big\{  \; #1 \; \big\}}       %Use: \bigSet  {Info} for space 
+    \newcommand{\BigSet}[1]         {\Big\{  \; #1 \; \Big\}}       %Use: \BigSet  {Info} for space 
+    \newcommand{\biggSet}[1]        {\bigg\{ \; #1 \; \bigg\}}      %Use: \biggSet {Info} for space 
+    \newcommand{\BiggSet}[1]        {\Bigg\{ \; #1 \; \Bigg\}}      %Use: \BiggSet {Info} for space 
+        
+    \newcommand{\Wrap}[1]           {\left( #1 \right)}             %Use: \Wrap {Info} for INTELLIGENT space
+    \newcommand{\bigWrap}[1]        {\big( \; #1 \; \big)}          %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigWrap}[1]        {\Big( \; #1 \; \Big)}          %Use: \BigBrackets  {Info} for space 
+    \newcommand{\biggWrap}[1]       {\bigg( \; #1 \; \bigg)}        %Use: \biggBrackets {Info} for space 
+    \newcommand{\BiggWrap}[1]       {\Bigg( \; #1 \; \Bigg)}        %Use: \BiggBrackets {Info} for space 
+
+    \newcommand{\Brackets}[1]       {\left[ #1 \right]}             %Use: \Brackets {Info} for INTELLIGENT space
+    \newcommand{\bigBrackets}[1]    {\big[ \; #1 \; \big]}          %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigBrackets}[1]    {\Big[ \; #1 \; \Big]}          %Use: \BigBrackets  {Info} for space 
+    \newcommand{\biggBrackets}[1]   {\bigg[ \; #1 \; \bigg]}        %Use: \biggBrackets {Info} for space 
+    \newcommand{\BiggBrackets}[1]   {\Bigg[ \; #1 \; \Bigg]}        %Use: \BiggBrackets {Info} for space 
+
+    \newcommand{\Generate}[1]   {\left\langle #1 \right\rangle}     %Use: \Generate {Info} <>
+    \newcommand{\Floor}[1]      {\left \lfloor #1 \right \rfloor}   %Use: \Floor {Info} for floor 
+    \newcommand{\Ceil}[1]       {\left \lceil #1 \right \rceil }    %Use: \Ceil {Info} for ceil
+
+    % =====  BETTERS MATH COMMANDS   =====
+    \newcommand{\pfrac}[2]      {\Wrap{\dfrac{#1}{#2}}}             %Use: Put fractions in parentesis
+
+    % =========================================
+    % ====   LINEAL ALGEBRA & VECTORS    ======
+    % =========================================
+
+    % ===== UNIT VECTORS  ================
+    \newcommand{\hati}      {\hat{\imath}}                           %Use: \hati for unit vector    
+    \newcommand{\hatj}      {\hat{\jmath}}                           %Use: \hatj for unit vector    
+    \newcommand{\hatk}      {\hat{k}}                                %Use: \hatk for unit vector
+
+    % ===== MAGNITUDE  ===================
+    \newcommand{\abs}[1]    {\left\lvert #1 \right\lvert}           %Use: \abs{expression} for |x|
+    \newcommand{\Abs}[1]    {\left\lVert #1 \right\lVert}           %Use: \Abs{expression} for ||x||
+    \newcommand{\Mag}[1]    {\left| #1 \right|}                     %Use: \Mag {Info} 
+
+    \newcommand{\bVec}[1]   {\mathbf{#1}}                           %Use for bold type of vector
+    \newcommand{\lVec}[1]   {\overrightarrow{#1}}                   %Use for a long arrow over a vector
+    \newcommand{\uVec}[1]   {\mathbf{\hat{#1}}}                     %Use: Unitary Vector Example: $\uVec{i}
+
+    % ===== FN LINEAL TRANSFORMATION  ====
+    \newcommand{\FnLinTrans}[1]{\mathcal{T}\Wrap{#1}}               %Use: \FnLinTrans for a cool T
+    \newcommand{\VecLinTrans}[1]{\mathcal{T}\pVector{#1}}           %Use: \LinTrans for a cool T
+    \newcommand{\FnLinealTransformation}[1]{\mathcal{T}\Wrap{#1}}   %Use: \FnLinealTransformation
+
+    % ===== ALL FOR DOT PRODUCT  =========
+    \makeatletter                                                   %WTF! IS THIS
+    \newcommand*\dotP{\mathpalette\dotP@{.5}}                       %Use: \dotP for dot product
+    \newcommand*\dotP@[2] {\mathbin {                               %WTF! IS THIS            
+        \vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}           %WTF! IS THIS
+    }                                                               %WTF! IS THIS
+    \makeatother                                                    %WTF! IS THIS
+
+    % === WRAPPERS FOR COLUMN VECTOR ===
+    \newcommand{\pVector}[1]                                        %Use: \pVector {Matrix Notation} use parentesis
+        { \ensuremath{\begin{pmatrix}#1\end{pmatrix}} }             %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    \newcommand{\lVector}[1]                                        %Use: \lVector {Matrix Notation} use a abs 
+        { \ensuremath{\begin{vmatrix}#1\end{vmatrix}} }             %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    \newcommand{\bVector}[1]                                        %Use: \bVector {Matrix Notation} use a brackets 
+        { \ensuremath{\begin{bmatrix}#1\end{bmatrix}} }             %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
+    \newcommand{\Vector}[1]                                         %Use: \Vector {Matrix Notation} no parentesis
+        { \ensuremath{\begin{matrix}#1\end{matrix}} }               %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+
+    % === MAKE MATRIX BETTER  =========
+    \makeatletter                                                   %Example: \begin{matrix}[cc|c]
+    \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c] {             %WTF! IS THIS
+        \hskip -\arraycolsep                                        %WTF! IS THIS
+        \let\@ifnextchar\new@ifnextchar                             %WTF! IS THIS
+        \array{#1}                                                  %WTF! IS THIS
+    }                                                               %WTF! IS THIS
+    \makeatother                                                    %WTF! IS THIS
+
+    % =========================================
+    % =======   FAMOUS FUNCTIONS   ============
+    % =========================================
+
+    % == TRIGONOMETRIC FUNCTIONS  ====
+    \newcommand{\Cos}[1] {\cos\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Sin}[1] {\sin\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Tan}[1] {tan\Wrap{#1}}                             %Simple wrappers
+
+    \newcommand{\Sec}[1] {sec\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Csc}[1] {csc\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Cot}[1] {cot\Wrap{#1}}                             %Simple wrappers
+
+    % === COMPLEX ANALYSIS TRIG ======
+    \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
+    \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same with parantesis
+    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same with Brackets
+
+
+    % =========================================
+    % ===========     CALCULUS     ============
+    % =========================================
+
+    % ====== TRANSFORMS =============
+    \newcommand{\FourierT}[1]   {\mathscr{F} \left\{ #1 \right\} }  %Use: \FourierT {Funtion}
+    \newcommand{\InvFourierT}[1]{\mathscr{F}^{-1}\left\{#1\right\}} %Use: \InvFourierT {Funtion}
+
+    % ====== DERIVATIVES ============
+    \newcommand \MiniDerivate[1][x]   {\dfrac{d}{d #1}}             %Use: \MiniDerivate[var] for simple use [var]
+    \newcommand \Derivate[2]          {\dfrac{d \; #1}{d #2}}       %Use: \Derivate [f(x)][x]
+    \newcommand \MiniUpperDerivate[2] {\dfrac{d^{#2}}{d#1^{#2}}}    %Mini Derivate High Orden Derivate -- [x][pow]
+    \newcommand \UpperDerivate[3] {\dfrac{d^{#3} \; #1}{d#2^{#3}}}  %Complete High Orden Derivate -- [f(x)][x][pow]
+
+    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}}  %Use: \MiniDerivate for simple use [var]
+    \newcommand \Partial[2] {\dfrac{\partial \; #1}{\partial #2}}   %Complete Partial Derivate -- [f(x)][x]
+    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][pow] 
+        {\dfrac{\partial^{#2}}{\partial #1^{#2}}}                   %Mini Derivate High Orden Derivate
+    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][pow]
+        {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
+
+    \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
+
+    % ====== INTEGRALS ============
+    \newcommand{\inftyInt} {\int_{-\infty}^{\infty}}                %Use: \inftyInt for simple integrants
+
+ 

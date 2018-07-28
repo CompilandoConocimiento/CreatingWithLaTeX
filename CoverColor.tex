@@ -6,86 +6,17 @@
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
     % *********   DOCUMENT ITSELF   **************
-    \documentclass[12pt, fleqn]{report}                             %Type of docuemtn and size of font and left eq
-    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
-    \usepackage{ifthen}                                             %Allow simple programming
-    \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
-    \usepackage{pdfpages}                                           %Create MetaData for a PDF and LINKS!
-    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
-    \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
-    \author{Oscar Andrés Rosas}                                     %Who I am
-
-    % *********   LANGUAJE AND UFT-8   *********
-    \usepackage[spanish]{babel}                                     %Please use spanish
-    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
-    \usepackage[T1]{fontenc}                                        %Please use spanish
-    \usepackage{textcmds}                                           %Allow us to use quoutes
-    \usepackage{changepage}                                         %Allow us to use identate paragraphs
-    \usepackage{anyfontsize}                                        %All the sizes
-
-    % *********   MATH AND HIS STYLE  *********
-    \usepackage{ntheorem, amsmath, amssymb, amsfonts}               %All fucking math, I want all!
-    \usepackage{mathrsfs, mathtools, empheq}                        %All fucking math, I want all!
-    \usepackage{centernot}                                          %Allow me to negate a symbol
-    \decimalpoint                                                   %Use decimal point
-
-    % *********   GRAPHICS AND IMAGES *********
-    \usepackage{graphicx}                                           %Allow to create graphics
-    \usepackage{wrapfig}                                            %Allow to create images
-    \graphicspath{ {Graphics/} }                                    %Where are the images :D
-
-    % *********   LISTS AND TABLES ***********
-    \usepackage{listings, listingsutf8}                             %We will be using code here
-    \usepackage[inline]{enumitem}                                   %We will need to enumarate
-    \usepackage{tasks}                                              %Horizontal lists
-    \usepackage{longtable}                                          %Lets make tables awesome
-    \usepackage{booktabs}                                           %Lets make tables awesome
-    \usepackage{tabularx}                                           %Lets make tables awesome
-    \usepackage{multirow}                                           %Lets make tables awesome
-    \usepackage{multicol}                                           %Create multicolumns
-
-    % *********   HEADERS AND FOOTERS ********
-    \def\ProjectAuthorLink{https://github.com/SoyOscarRH}           %Just to keep it in line
-    \def\ProjectNameLink{\ProjectAuthorLink/Proyect}                %Link to Proyect
-
-    % *********   HEADERS AND FOOTERS ********
-    \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
-    \pagestyle{fancy}                                               %Lets make awesome headers/footers
-    \setlength{\headheight}{16pt}                                   %Top line
-    \setlength{\parskip}{0.5em}                                     %Top line
-    \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
-
-    \lhead{                                                         %Left Header
-        \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
-        {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
-    }
-
-    \rhead{                                                         %Right Header
-        \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
-            {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
-    }
-
-    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}     %This will always be a footer  
-
-    \fancyfoot[L]{                                                  %Algoritm for a changing footer
-        \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
-            {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
-                {\footnotesize                                      %Send the page
-                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
-            {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
-                {\footnotesize                                      %Send the author
-                    {\textsc{Compilando Conocimiento}}}}            %Send the author
-    }
- 
-
-
-
-
-
-
-
-
-
+    \documentclass[12pt, fleqn]{report}                             
+    \usepackage[margin=1.2in]{geometry}                             
+    \usepackage{hyperref}                                           
+    \usepackage{pdfpages}                                           
+    \hypersetup{pageanchor=false}                                   
+    \setlength{\parindent}{0pt}                                     
+    \usepackage[utf8]{inputenc}                                     
+    \usepackage[T1]{fontenc}                                        
+    \usepackage{anyfontsize}                                        
+    \usepackage{graphicx}                                           
+    \author{Oscar Andrés Rosas}                                     
 
 
 
@@ -112,7 +43,8 @@
     \makebox[0pt][l]{\rule{1.3\textwidth}{3pt}}                     %Make a cool line
     
     \href{ProjectNameLink}                                          %Link to project
-    {\textbf{\textsc{\Huge Project Link}}}\\[2.7cm]                 %Name of project   
+    {\textbf{\textsc{\Huge Project Link}}}                          %Name of project 
+    \vspace{2.7cm}                                                  %Name of project   
 
     % ============ NAME OF THE BOOK  ===============
     \href{ProjectNameLink/Book}                                     %Link to Author
