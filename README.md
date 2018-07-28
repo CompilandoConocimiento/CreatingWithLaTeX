@@ -27,12 +27,13 @@ Here are some that we think you find useful:
 [See Result](CoverBlackAndWhite.pdf) -
 [See Code](CoverBlackAndWhite.tex)
 
-![](Graphics/CoverBlackAndWhite.png)
+![](Graphics/CoverBlackWhite.png)
 
 
 #### Color Cover
 [See Result](CoverColor.pdf) - 
 [See Code](CoverColor.tex)
 
-![](Graphics/CoverColor.png)
+![](Graphics/CoverInColor.png)
+
 
