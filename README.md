@@ -30,7 +30,7 @@ Here are some that we think you find useful:
 ![](Graphics/CoverBlackAndWhite.png)
 
 
-####Color Cover
+#### Color Cover
 [See Result](CoverColor.pdf) - 
 [See Code](CoverColor.tex)
 
