@@ -6,15 +6,16 @@
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
     
-    % *********   HEADERS AND FOOTERS ********
-    \def \ProjectAuthorLink {https://github.com/SoyOscarRH}         %Just to keep it in line
-    \def \ProjectNameLink   {\ProjectAuthorLink/Proyect}            %Link to Proyect
+    % *********  SPECIFIC FOR THIS BOOK  ********
+    \def\ProjectAuthorLink{https://github.com/CompilandoConocimiento}
+    \def\ProjectNameLink{\ProjectAuthorLink/LibroProbabilidad}    
+    
 
     % *********   DOCUMENT ITSELF   **************
     \documentclass[12pt, fleqn]{report}                             %Type of doc and size of font and left equations
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming using if - then
-    \usepackage{hyperref}                                           %Allow to create hiperlinks
+    \usepackage[hidelinks]{hyperref}                                %Allow to create hiperlinks and Fuck Firefox
     \usepackage{pdfpages}                                           %Allow us 'import' PDF's
     \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build :v
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
