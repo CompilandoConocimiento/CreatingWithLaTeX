@@ -109,6 +109,9 @@
     \newenvironment{MultiLineEquation*}[1]                          %Use: To create MultiLine equations
         {\begin{\Eq*}\begin{alignedat}{#1}}                         %Use: \begin{Multi..}{Num. de Columnas}
         {\end{alignedat}\end{\Eq*}}                                 %And.. that's it!
+
+    \newenvironment{LargeEq} {\begingroup \Large}{\endgroup}        %Make eq bigger
+    \newenvironment{HugeEq} {\begingroup \Huge}{\endgroup}          %Make eq bigger!
     
 
     % =========================================
@@ -143,6 +146,9 @@
     \newcommand \lEqual  {\MiniSpace \Leftrightarrow \MiniSpace}    %Use: \lEqual for a logic double arrow
     \newcommand \lInfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lInfire for a logic infire
     \newcommand \lLongTo {\longrightarrow}                          %Use: \lLongTo for a long arrow
+    \newcommand \lAnd    {\land}                                    %Use: \lAnd ^
+    \newcommand \lOr     {\lor}                                     %Use: \lOr or symbol
+    \newcommand \lNot    {\neg}                                     %Use: \lNot for negation
 
     % =====  FAMOUS SETS  ===============
     \DeclareMathOperator \Naturals     {\mathbb{N}}                 %Use: \Naturals por Notation
