@@ -244,6 +244,11 @@
         \array{#1}                                                  %WTF! IS THIS
     }                                                               %WTF! IS THIS
     \makeatother                                                    %WTF! IS THIS
+    
+    \newcommand{\adotP}[2] {\left< #1, #2 \right> }                 %Use for <x, y>
+    \newcommand{\wdotP}[2] {\Wrap{ #1, #2 } }                       %Use for (x, y)
+    \newcommand{\cdotP}[2] {\Wrap{ #1 \dotP #2 } }                  %Use for (x * y)
+
 
     % =========================================
     % =======   FAMOUS FUNCTIONS   ============
