@@ -10,7 +10,7 @@ You can copy and use all of this code, use it to create awesome things, we belie
 - **Header for OUR Books**: [Header.tex](MyHeaderForHugeFiles.tex)
 - **Codes for math and tables**: [Math.tex](Math.tex)
 - **Codes for code input**: [Code.tex](Code.tex)
-- **Insert image of wrap it around text**: [Images.tex](Images.tex)
+- **Insert image or wrap it around text**: [Images.tex](Images.tex)
 
 ## Compilando Commands
 To create this books we create many new commands  (specially about math) we will love if you
