@@ -8,7 +8,7 @@
     
     % *********  SPECIFIC FOR THIS BOOK  ********
     \def\ProjectAuthorLink{https://github.com/CompilandoConocimiento}
-    \def\ProjectNameLink{\ProjectAuthorLink/LibroProbabilidad}    
+    \def\ProjectNameLink{\ProjectAuthorLink/RandomProject}    
     
 
     % *********   DOCUMENT ITSELF   **************
@@ -371,6 +371,9 @@
 
     \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
 
+    \definecolor{SolarizedBase}{HTML}{fdf6e3}                       %Use: Color :D
+    \definecolor{SolarizedFont}{HTML}{073642}                       %Use: Color :D
+
     % =====  ENVIRONMENT ==============
     \newcommand{\Color}[2]{\textcolor{#1}{#2}}                      %Simple color environment
     \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
@@ -381,15 +384,22 @@
 % ===========           CODE EDITING          ===========
 % =======================================================
 
+    \newcommand{\fontCode}        { \ttfamily\bfseries }            %Use: \fontCode for font
+    \newcommand{\fontCodeTiny}    { \fontCode\tiny }                %Sizes
+    \newcommand{\fontCodeFoot}    { \fontCode\footnotesize }        %Sizes
+    \newcommand{\fontCodeScript}  { \fontCode\scriptsize }          %Sizes
+    \newcommand{\fontCodeCostume} { \fontCode\fontsize{10}{7} }     %Sizes
+   
+
     % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
         backgroundcolor     = \color{BlueGrey900MD},                %Background Color  
-        basicstyle          = \tiny\color{white},                   %Style of text
+        basicstyle          = \fontCodeTiny\color{white},           %Style of text
         commentstyle        = \color{BlueGrey200MD},                %Comment style
         stringstyle         = \color{Green300MD},                   %String style
         keywordstyle        = \color{Blue300MD},                    %keywords style
         numberstyle         = \tiny\color{TealMD},                  %Size of a number
-        frame               = shadowbox,                            %Adds a frame around the code
+        frame               = none,                                 %Adds a frame around the code
         breakatwhitespace   = true,                                 %Style   
         breaklines          = true,                                 %Style   
         showstringspaces    = false,                                %Hate those spaces                  
@@ -405,7 +415,7 @@
     % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStylePurity} {                        %This is Code Style
         backgroundcolor     = \color{white},                        %Background Color  
-        basicstyle          = \tiny\color{BlueGrey900MD},           %Style of text
+        basicstyle          = \fontCodeTiny\color{BlueGrey900MD},   %Style of text
         commentstyle        = \color{Green300MD},                   %Comment style
         stringstyle         = \color{Teal700MD},                    %String style
         keywordstyle        = \color{Blue700MD},                    %keywords style
@@ -422,5 +432,25 @@
         tabsize             = 4,                                    %Style
         inputencoding       = utf8/latin1                           %Allow me to use special chars
     }
+
+    % =====  CODE EDITOR =============
+    \lstdefinestyle{CompilandoStyleSolarized} {                     %This is Code Style
+        backgroundcolor     = \color{SolarizedBase},                %Background Color  
+        basicstyle          = \fontCodeFoot\color{SolarizedFont},   %Style of text
+        commentstyle        = \color{Green300MD},                   %Comment style
+        stringstyle         = \color{Teal700MD},                    %String style
+        keywordstyle        = \color{Blue700MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = none,                                 %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = none,                                 %Style                   
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
+    }
  
-    \lstset{style = CompilandoStyle}                                %Use this style
+    \lstset{style = CompilandoStyleSolarized}                          %Use this style
+
