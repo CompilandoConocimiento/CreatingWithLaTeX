@@ -12,7 +12,9 @@
     
 
     % *********   DOCUMENT ITSELF   **************
-    \documentclass[12pt, fleqn]{report}                             %Type of doc and size of font and left equations
+    \documentclass[12pt, fleqn]{article}                            %Type of doc and size of font and left equations
+    \usepackage[T1]{fontenc}                                        %Great fonts
+    \usepackage{lmodern}                                            %Great fonts
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming using if - then
     \usepackage[hidelinks]{hyperref}                                %Allow to create hiperlinks and Fuck Firefox
@@ -20,6 +22,7 @@
     \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build :v
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
     \author{Oscar Andrés Rosas}                                     %Who I am
+
 
     % *********   LANGUAJE    *****************
     \usepackage[spanish]{babel}                                     %Please allow me to type in spanish
